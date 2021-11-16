@@ -5,3 +5,9 @@ elif alter <= 14:
     print("Beurteilung nicht möglich, zu jung.")
 else:
     print("Sie sind Erwachsen.")
+
+#
+#
+#
+#
+ll

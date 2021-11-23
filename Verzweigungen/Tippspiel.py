@@ -11,5 +11,7 @@ if tip2 == tip4:
     punkte += 1
 elif tip2 != tip4:
     punkte -= 1
+if punkte == -1:
+    punkte += 1
 print("Ergebnis:",",",tip3,":",tip4,"Tipp:",tip1,":",tip2,",","->",punkte)
 

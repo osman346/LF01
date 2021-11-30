@@ -1,3 +1,4 @@
-import time
+sik = print("emre der hundepic")
 
-print(time.strftime("%d.%m.%Y %H:%M:%S"))
+sik
+ 

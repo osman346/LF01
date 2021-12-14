@@ -64,7 +64,12 @@ if Monat == 1 or Monat == 3 or Monat == 5 or Monat == 7 or Monat == 8 or Monat =
         br += 1
 if Monat == 2 and februar == 1:
     for zahl in range(1, 29):
-        print(zahl)
+        if br == 7:
+            print(f"{zahl:>2}", sep="\n")
+            br = 0
+        else:
+            print(f"{zahl:>2}", end=" ")
+        br += 1
 elif Monat == 2 and februar == 0:
     for zahl in range(1, 30):
         if br == 7:

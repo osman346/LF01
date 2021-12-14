@@ -54,7 +54,9 @@ if Monat == 4 or Monat == 6 or Monat == 9 or Monat == 11:
 print('Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So')
 if Monat == 1 or Monat == 3 or Monat == 5 or Monat == 7 or Monat == 8 or Monat == 10 or Monat == 12:
     for zahl in range(1, 32):
-        print(zahl)
+        print(
+            zahl)  # Es wird simpel aufgezählt. Hab ich hier gelernt.
+        # http://coderdojoka.github.io/Materialien//python/tutorials/for/for
 if Monat == 2 and februar == 1:
     for zahl in range(1, 29):
         print(zahl)

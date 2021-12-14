@@ -53,22 +53,14 @@ if Monat == 4 or Monat == 6 or Monat == 9 or Monat == 11:
 # Ausgabe
 print('Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So')
 if Monat == 1 or Monat == 3 or Monat == 5 or Monat == 7 or Monat == 8 or Monat == 10 or Monat == 12:
-    monat_max_liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
-                       26, 27, 28, 29, 30, 31]
-    for zahl in monat_max_liste:
+    for zahl in range(1, 32):
         print(zahl)
 if Monat == 2 and februar == 1:
-    monat_max_liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-                       27, 28]
-    for zahl in monat_max_liste:
+    for zahl in range(1, 29):
         print(zahl)
 elif Monat == 2 and februar == 0:
-    monat_max_liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-                       27, 28, 29]
-    for zahl in monat_max_liste:
+    for zahl in range(1, 30):
         print(zahl)
 if Monat == 4 or Monat == 6 or Monat == 9 or Monat == 11:
-    monat_max_liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-                       27, 28, 29, 30]
-    for zahl in monat_max_liste:
+    for zahl in range(1, 31):
         print(zahl)

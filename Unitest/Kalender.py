@@ -52,17 +52,32 @@ if Monat == 4 or Monat == 6 or Monat == 9 or Monat == 11:
     print("Dieser Monat hat 30 Tage.")
 # Ausgabe
 print('Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So')
+br = 1  # Damit die Zahlen ab Sonntag eine Zeile brechen
 if Monat == 1 or Monat == 3 or Monat == 5 or Monat == 7 or Monat == 8 or Monat == 10 or Monat == 12:
     for zahl in range(1, 32):
-        print(
-            zahl)  # Es wird simpel aufgezählt. Hab ich hier gelernt.
-        # http://coderdojoka.github.io/Materialien//python/tutorials/for/for
+        if br == 7:
+            print(f"{zahl:>2}", sep="\n")
+            br = 0
+        else:
+            print(f"{zahl:>2}", end=" ")  # Das String Formatting hilt damit die Zahlen sauber unter den Wochentagen
+            # stehen. Emre, Frau Naber und "Python String Formatting.pdf" haben mir auf die Sprünge geholfen.
+        br += 1
 if Monat == 2 and februar == 1:
     for zahl in range(1, 29):
         print(zahl)
 elif Monat == 2 and februar == 0:
     for zahl in range(1, 30):
-        print(zahl)
+        if br == 7:
+            print(f"{zahl:>2}", sep="\n")
+            br = 0
+        else:
+            print(f"{zahl:>2}", end=" ")
+        br += 1
 if Monat == 4 or Monat == 6 or Monat == 9 or Monat == 11:
     for zahl in range(1, 31):
-        print(zahl)
+        if br == 7:
+            print(f"{zahl:>2}", sep="\n")
+            br = 0
+        else:
+            print(f"{zahl:>2}", end=" ")
+        br += 1

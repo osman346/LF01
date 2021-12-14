@@ -1,97 +1,72 @@
-def leap_year(year):  # Definition eines Schaltjahres
-    if year % 400 == 0:
-        return True
+# Python code to print Calendar
+# Without use of Calendar module
+
+mm = 2
+yy = 2020
+
+month = {1: 'January', 2: 'February', 3: 'March',
+         4: 'April', 5: 'May', 6: 'June', 7: 'July',
+         8: 'August', 9: 'September', 10: 'October',
+         11: 'November', 12: 'December'}
+
+# code below for calculation of odd days
+day = (yy - 1) % 400
+day = (day // 100) * 5 + ((day % 100) - (day % 100) // 4) + ((day % 100) // 4) * 2
+day = day % 7
+
+nly = [31, 28, 31, 30, 31, 30,
+       31, 31, 30, 31, 30, 31]
+ly = [31, 29, 31, 30, 31, 30,
+      31, 31, 30, 31, 30, 31]
+s = 0
+
+if yy % 4 == 0:
+    for i in range(mm - 1):
+        s += ly[i]
+else:
+    for i in range(mm - 1):
+        s += nly[i]
+
+day += s % 7
+day = day % 7
+
+# variable used for white space filling
+# where date not present
+space = ''
+space = space.rjust(2, ' ')
+
+# code below is to print the calendar
+print(month[mm], yy)
+print('Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa')
+
+if mm == 9 or mm == 4 or mm == 6 or mm == 11:
+    for i in range(31 + day):
+
+        if i <= day:
+            print(space, end=' ')
+        else:
+            print("{:02d}".format(i - day), end=' ')
+            if (i + 1) % 7 == 0:
+                print()
+elif mm == 2:
+    if yy % 4 == 0:
+        p = 30
     else:
-        if year % 4 == 0:
-            if year % 100 == 0:
-                return False
-            else:
-                return True
+        p = 29
+
+    for i in range(p + day):
+        if i <= day:
+            print(space, end=' ')
         else:
-            return False
+            print("{:02d}".format(i - day), end=' ')
+            if (i + 1) % 7 == 0:
+                print()
+else:
+    for i in range(32 + day):
 
-
-def days_in_month(year, month):  # Definition der Anzahl der Tage in einem Monat
-    if month == 2:
-        if leap_year(year) == True:
-            return 29
+        if i <= day:
+            print(space, end=' ')
         else:
-            return 28
-    elif month in (4, 6, 9, 11):
-        return 30
-    else:
-        return 31
-
-
-def week_day(year, day, month):  # Definition eines Wochentages
-    y = year % 100
-    c = year // 100
-    if month == 5:
-        k = 0
-    elif month == 8:
-        k = 1
-    elif month == 2:
-        if leap_year(year) == True:
-            k = 1
-        else:
-            k = 2
-    elif month in (11, 3):
-        k = 2
-    elif month == 6:
-        k = 3
-    elif month in (9, 12):
-        k = 4
-    elif month in (4, 7):
-        k = 5
-    elif month == 1:
-        if leap_year(year) == True:
-            k = 5
-        else:
-            k = 6
-    elif month == 10:
-        k = 6
-    d = (day + k + y + y // 4 - 2 * (c % 4)) % 7
-    return d
-
-
-def month_name(m):  # Definition des Monatsnamen
-    if m == 1:
-        return "Januar"
-    if m == 2:
-        return "Februar"
-    if m == 3:
-        return "Maerz"
-    if m == 4:
-        return "April"
-    if m == 5:
-        return "Mai"
-    if m == 6:
-        return "Juni"
-    if m == 7:
-        return "Juli"
-    if m == 8:
-        return "August"
-    if m == 9:
-        return "September"
-    if m == 10:
-        return "Oktober"
-    if m == 11:
-        return "November"
-    if m == 12:
-        return "Dezember"
-
-
-def calendar(year):  # Ausgabe des Kalenders
-    W = 0
-    for m in range(1, 13):
-        s = month_name(m) + ' ' + str(year)
-        print('{:^23}'.format(s))
-        print('KW', 'SO', 'MO', 'DI', 'MI', 'DO', 'FR', 'SA')
-        for day in range(1, days_in_month(year, m) + 1):
-            t = week_day(year, day, m) * ' ' + str(day)
-            print(W, t)
-            W += 1
-        print()
-
-
-calendar(2017)
+            print("{:02d}".format(i - day), end=' ')
+            if (i + 1) % 7 == 0:
+                print()

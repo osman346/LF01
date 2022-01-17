@@ -1,27 +1,27 @@
-#Aufgabe 1
+#   Aufgabe 1
 
 k = 1
-stern = 0
+s = 0
 
 for i in range(1000000):
     if i % 2 == 0:
-        stern += 4 / k
+        s += 4 / k
     else:
 
-        stern -= 4 / k
+        s -= 4 / k
 
     k += 2
 
-print("Aufgabe 1", stern)
+print("Aufgabe 1", s)
 
-#Aufgabe 2
+#   Aufgabe 2
 
-anfangspopulation= 0
+x = 0
 
-for anfangspopulation in range(64):
-    print(2 ** anfangspopulation)
+for x in range(64):
+    print(2 ** x)
 
-#Aufgabe 3
+#   Aufgabe 3
 
 print("Jahr     Anfangspopulation    Zuwachs    Endpopulation")
 jahr = 2000                 # Jahr
@@ -36,11 +36,14 @@ while weiter == "j" or weiter == "J":
     for i in range(5):
         print(f"{jahr}{stern}        {round(anfangspopulation, 3):=10}                {round(zuwachs, 3):=10}      {round(endpopulation, 3):=10}")
         anfangspopulation = endpopulation
-        ep = endpopulation / 100 * 1.5
-        endpopulation = ep + endpopulation
+        endpopulation = endpopulation / 100 * 1.5
+        endpopulation = anfangspopulation + endpopulation
         jahr += 1
         zuwachs = endpopulation - anfangspopulation
         if jahr >= 2013:
             stern = "*"
 
     weiter = input('Weiter Machen? Für Ja "J" eingeben.')
+
+#   Aufgabe 4
+

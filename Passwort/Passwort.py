@@ -65,6 +65,7 @@ if not d in passwort:
 # Neues Passwort
 print("------------------------------------------------------")
 gen = input("Möchten Sie ein Passwort generieren? (J/N)\n")
+laenge = int(input("Wie lang soll das Passwort sein?: "))
 
 
 def genpw():  # Passwort generierung
@@ -74,6 +75,5 @@ def genpw():  # Passwort generierung
 
 if gen == "J" or gen == "j":  # Abfrage für ein neues Passwort
     print("Ihr neues Passwort lautet:", genpw())
-    laenge = int(input("Wie lang soll das Passwort sein?: "))
 else:
     quit("Sie entschieden sich dafür kein Passwort zu generieren.")

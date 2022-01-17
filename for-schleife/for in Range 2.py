@@ -43,7 +43,7 @@ while weiter == "j" or weiter == "J":
         if jahr >= 2013:
             stern = "*"
 
-    weiter = input('Weiter Machen? Für Ja "J" eingeben.')
+    weiter = input('Weiter? (J/N)')
 
 #   Aufgabe 4
 

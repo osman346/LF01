@@ -20,7 +20,7 @@ x = 0
 
 for x in range(64):
     print(2 ** x)
-
+print("Aufgabe 2")
 #   Aufgabe 3
 
 print("Jahr     Anfangspopulation    Zuwachs    Endpopulation")
@@ -47,3 +47,20 @@ while weiter == "j" or weiter == "J":
 
 #   Aufgabe 4
 
+for i in range(0, 7):
+    for j in range(0, 7):
+        print(f"({i}", "|",  f"{j})", end=" ")
+        if i == 0 and j == 6:
+            print("\n")
+        if i == 1 and j == 6:
+            print("\n")
+        if i == 2 and j == 6:
+            print("\n")
+        if i == 3 and j == 6:
+            print("\n")
+        if i == 4 and j == 6:
+            print("\n")
+        if i == 5 and j == 6:
+            print("\n")
+        if i == 6 and j == 6:
+            print("\n")

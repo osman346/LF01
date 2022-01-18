@@ -26,7 +26,7 @@ print("Aufgabe 2")
 print("Jahr     Anfangspopulation    Zuwachs    Endpopulation")
 jahr = 2000                 # Jahr
 anfangspopulation = 6.125   # Anfangspopulation
-zuwachs = 0.092                   # Zuwachs
+zuwachs = 0.092             # Zuwachs
 endpopulation = 6.217       # Endpopulation
 stern = ""                  # Stern
 

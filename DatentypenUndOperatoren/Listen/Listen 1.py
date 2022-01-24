@@ -69,5 +69,5 @@ print("Aufgabe 10")
 
 liste10 = [1, 2, 3, 4, 5]
 print("Vorher:", liste10)
-del liste10[2]
+liste10.remove(2)
 print("Nachher:", liste10)

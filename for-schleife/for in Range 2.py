@@ -7,20 +7,18 @@ for i in range(1000000):
     if i % 2 == 0:
         s += 4 / k
     else:
-
         s -= 4 / k
-
     k += 2
 
 print("Aufgabe 1", s)
-
+print()
+print("Aufgabe 2")
 #   Aufgabe 2
-
-x = 0
 
 for x in range(64):
     print(2 ** x)
-print("Aufgabe 2")
+print()
+print("Aufgabe 3")
 #   Aufgabe 3
 
 print("Jahr     Anfangspopulation    Zuwachs    Endpopulation")
@@ -34,7 +32,7 @@ weiter = "j"
 
 while weiter == "j" or weiter == "J":
     for i in range(5):
-        print(f"{jahr}{stern}        {round(anfangspopulation, 3):=10}                {round(zuwachs, 3):=10}      {round(endpopulation, 3):=10}")
+        print(f"{jahr}{stern}            {round(anfangspopulation, 3):=10}{round(zuwachs, 3):=10}       {round(endpopulation, 3):=10}")
         anfangspopulation = endpopulation
         endpopulation = endpopulation / 100 * 1.5
         endpopulation = anfangspopulation + endpopulation

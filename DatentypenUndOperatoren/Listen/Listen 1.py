@@ -71,3 +71,5 @@ liste10 = [1, 2, 3, 4, 5]
 print("Vorher:", liste10)
 liste10.remove(2)
 print("Nachher:", liste10)
+
+#   credits osman346

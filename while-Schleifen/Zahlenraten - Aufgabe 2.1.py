@@ -16,7 +16,7 @@ while True:
     elif eingabe > zahl:
         print("die geratene Zahl ist zu groß")
     else:
-        print("die geratene Zahl ist zu klein")
+        print("die geratene Zahl ist zu klein_buchstaben")
 
     if (versuche == 7):
         print("zu oft falsch, neuer Versuch.")

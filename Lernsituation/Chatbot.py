@@ -16,8 +16,7 @@ def benutzeranleitung():
     print(name, ",", "wenn du Hilfe benötigst hier:")
     print("Beenden  | Zum beenden musst du einfach 'bye' eintippen")
     print("Frage    | Zum fragen musst du einfach 'frage' eintippen")
-    print("Leer     | Zum wiederholen der Eingabe musst du einfach nichts eintippen")
-    print("Hilfe    | Für Hilfe  musst du einfach 'hilfe' eintippen")
+    print("Hilfe    | Für Hilfe musst du einfach 'hilfe' eintippen")
 
 
 zufallsantworten = ["Weiß ich nicht...", "Leider kann ich dir das nicht beantworten ", "Interesannt... "
@@ -43,9 +42,9 @@ def passende_antworten():
         print(antworten["hallo"])
     elif "dich programmiert" in thema:
         print(antworten["dich programmiert"])
-    elif "entsperre account" in thema:
+    elif "entsperre" and "account" in thema:
         print(antworten["entsperre account"])
-    elif "wie lange unternehmen" in thema:
+    elif "wie lange" and "unternehmen" in thema:
         print(antworten["wie lange unternehmen"])
     elif "bye" in thema:
         print(antworten["bye"])
@@ -83,3 +82,5 @@ while True:
             print("Ungültige Eingabe!")
     elif eingabe == "bye" or eingabe == "Bye" or eingabe == "Bye!" or eingabe == "bye!":
         quit("Exiting...")
+    else:
+        print("Ungültige Eingabe!")

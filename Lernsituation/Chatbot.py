@@ -24,7 +24,7 @@ zufallsantworten = ["Weiß ich nicht...", "Leider kann ich dir das nicht beantwo
                                                                                         "formulieren?",
                     "Das habe ich leider nicht verstanden..."]
 antworten = {"strom": "Ich liebe Strom!",
-             "bist du": "Ich eine eine KI",
+             "bist du": "Ich bin eine KI",
              "hallo": "Hi!",
              "dich programmiert": "Mein programmierer heißt Osman",
              "entsperre account": "Melde dich hierfür bitte beim Support Level '2'",

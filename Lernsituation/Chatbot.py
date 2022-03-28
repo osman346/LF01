@@ -26,30 +26,18 @@ zufallsantworten = ["Weiß ich nicht...", "Leider kann ich dir das nicht beantwo
 antworten = {"strom": "Ich liebe Strom!",
              "bist du": "Ich bin eine KI",
              "hallo": "Hi!",
-             "dich programmiert": "Mein programmierer heißt Osman",
-             "entsperre account": "Melde dich hierfür bitte beim Support Level '2'",
-             "wie lange unternehmen": "Unser Unternehmen gibt es seit ca. 5 Jahren",
+             "dich" and "programmiert": "Mein programmierer heißt Osman",
+             "entsperre" and "account": "Melde dich hierfür bitte beim Support Level '2'",
+             "wie lange" and "unternehmen": "Unser Unternehmen gibt es seit ca. 5 Jahren",
              "bye": "Tschüss! ich hoffe ich konnte dir weiterhelfen",
              "alt": "Ich bin drei Wochen alt"}
 
 
 def passende_antworten():
-    if "strom" in thema:
-        print(antworten["strom"])
-    elif "bist du" in thema:
-        print(antworten["bist du"])
-    elif "hallo" in thema:
-        print(antworten["hallo"])
-    elif "dich programmiert" in thema:
-        print(antworten["dich programmiert"])
-    elif "entsperre" and "account" in thema:
-        print(antworten["entsperre account"])
-    elif "wie lange" and "unternehmen" in thema:
-        print(antworten["wie lange unternehmen"])
-    elif "bye" in thema:
-        print(antworten["bye"])
-    elif "alt" in thema:
-        print(antworten["alt"])
+    for i in thema:
+        if i in antworten.keys():
+            print(antworten[i])
+            break
     else:
         print(random.choice(zufallsantworten))
 
